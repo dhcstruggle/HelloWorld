@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.helloworld">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="helloworld.layout.TableLayoutActivity"></activity>
+        <activity android:name="helloworld.layout.FrameLayoutActivity" />
+        <activity android:name="helloworld.layout.AbsoluteActivity" />
+        <activity android:name="helloworld.layout.RelativeActivity" />
+        <activity android:name="helloworld.layout.ConstrainActivity" />
+        <activity android:name="helloworld.layout.LinearActivity" />
+        <activity android:name="helloworld.layout.LayoutActivity" />
+        <activity android:name="helloworld.LogActivity" />
+        <activity android:name="helloworld.bankservicedemo.BankBossActivity" />
+        <activity android:name="helloworld.bankservicedemo.BankWorkerActivity" />
+        <activity android:name="helloworld.bankservicedemo.NormalUserActivity" />
+        <activity android:name="helloworld.bankservicedemo.BankServiceActivity" />
+
+        <service
+            android:name="helloworld.bankservicedemo.BankService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.chaos.ACTION_NORMAL_USER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.chaos.ACTION_BANK_WORKER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.chaos.ACTION_BANK_BOSS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="helloworld.ServiceActivity" />
+
+        <service
+            android:name="helloworld.services.FirstService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="helloworld.MyTestActivity" />
+        <activity android:name="helloworld.broadcast.BroadActivity2" />
+        <activity android:name="helloworld.broadcast.BroadActivity" />
+        <activity android:name="helloworld.datastorage.FileActivity" />
+        <activity android:name="helloworld.datastorage.SharedPreferencesActivity" />
+        <activity android:name="helloworld.datastorage.DataStorageActivity" />
+        <activity android:name="helloworld.HandlerActivity" />
+        <activity android:name="helloworld.EventActivity" />
+        <activity android:name="helloworld.fragment.ContainerActivity" />
+        <activity
+            android:name="helloworld.jump.BActivity"
+            android:label="B"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="com.example.helloworld.test.BActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="helloworld.jump.AActivity"
+            android:label="A"
+            android:launchMode="standard" />
+        <activity android:name="helloworld.PopupWindowActivity" />
+        <activity android:name="helloworld.CheckBoxActivity$PopWindowActivity" />
+        <activity android:name="helloworld.CustomDialogActivity" />
+        <activity android:name="helloworld.ProgressActivity" />
+        <activity android:name="helloworld.DialogActivity" />
+        <activity android:name="helloworld.ToastActivity" />
+        <activity android:name="helloworld.WebViewActivity" />
+        <activity android:name="helloworld.recyclerview.PuRecyclerViewActivity" />
+        <activity android:name="helloworld.recyclerview.GridRecyclerViewActivity" />
+        <activity android:name="helloworld.recyclerview.HorRecyclerViewActivity" />
+        <activity android:name="helloworld.recyclerview.LinearRecyclerViewActivity" />
+        <activity android:name="helloworld.recyclerview.RecyclerViewActivity" />
+        <activity android:name="helloworld.gridview.GridViewActivity" />
+        <activity android:name="helloworld.listview.ListViewActivity" />
+        <activity android:name="helloworld.ImageViewActivity" />
+        <activity android:name="helloworld.CheckBoxActivity" />
+        <activity android:name="helloworld.RadioBtnActivity" />
+        <activity android:name="helloworld.EditTextActivity" />
+        <activity android:name="helloworld.ButtonActivity" />
+        <activity android:name="helloworld.TextViewActivity" />
+        <activity android:name="helloworld.LifeCycleActivity" />
+        <activity android:name="helloworld.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

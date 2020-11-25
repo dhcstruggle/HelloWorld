@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_inside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="内部类实现"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_inside_noname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="匿名内部类实现"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="事件源所在类实现"
+        android:textAllCaps="false"/>
+
+
+    <Button
+        android:id="@+id/btn_ouside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="外部类实现"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="基于XML Onclick方法实现"
+        android:textAllCaps="false"
+        android:onClick="xmlshow"/>
+
+    <helloworld.widget.MyButton
+        android:id="@+id/btn_my"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Button"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

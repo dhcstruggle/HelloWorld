@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    
+    <ProgressBar
+        android:id="@+id/pb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/pb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="10"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="20"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/bg_progress"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyProgressBar"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_addp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_pg_dialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress Dialog1"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_pg_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress Dialog2"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        />
+    
+</LinearLayout>
