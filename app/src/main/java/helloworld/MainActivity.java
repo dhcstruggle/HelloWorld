@@ -1,6 +1,7 @@
 package helloworld;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -120,10 +121,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLayout.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        Intent intent = null;
-        Class<?> cls = null;
+        Intent intent;
+        Class<?> cls;
         switch (v.getId()){
             case R.id.btn_layout:
                 cls = LayoutActivity.class;

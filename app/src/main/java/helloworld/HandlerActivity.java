@@ -2,6 +2,7 @@ package helloworld;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 
 import androidx.annotation.NonNull;
@@ -13,34 +14,27 @@ import helloworld.util.ToastUtil;
 
 public class HandlerActivity extends AppCompatActivity {
 
-    private Handler mHandler;
-    @Override
+    private final Handler mHandler = new Handler(Looper.myLooper()){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case 1:
+                    ToastUtil.showMsg(HandlerActivity.this, "线程通信成功1");
+                    break;
+                case 2:
+                    ToastUtil.showMsg(HandlerActivity.this, "线程通信成功2");
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    };
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handler);
-
-//        mHandler = new Handler();
-//        mHandler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(HandlerActivity.this, ButtonActivity.class);
-//                startActivity(intent);
-//            }
-//        }, 3000);
-
-        mHandler = new Handler(){
-            @Override
-            public void handleMessage(@NonNull Message msg) {
-                super.handleMessage(msg);
-                switch (msg.what){
-                    case 1:
-                        ToastUtil.showMsg(HandlerActivity.this, "线程通信成功");
-                        break;
-                }
-
-            }
-        };
-
         new Thread(){
             @Override
             public void run() {
@@ -48,6 +42,7 @@ public class HandlerActivity extends AppCompatActivity {
                 Message message = new Message();
                 message.what = 1;
                 mHandler.sendMessage(message);
+                mHandler.sendEmptyMessageDelayed(2, 2000);
             }
         }.start();
 
